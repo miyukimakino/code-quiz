@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Meiryo", sans-serif;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.64;
+}
+
+.header {
+  /* position: relative; */
+  border-bottom: 2px #eee solid;
+}
+
+.header .container {
+  height: 60px;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.header .HamburgerMenu {
+  width: 60px;
+}
+
+/* 現在は3本線がｘになる通常の動きのハンバーガーメニュー
+スタイルを追加させ、奥行きを持ちながらｘが横回転する動きを持たせてください */
+/* .header .HamburgerMenuArea {
+  transition: all 0.5s;
+} */
+
+.header .HamburgerMenu .line {
+  background-color: #333;
+  border-radius: 9999px;
+  height: 5px;
+  width: 75%;
+  display: block;
+  position: relative;
+  transition: all 0.5s;
+  margin: 0 auto;
+}
+
+.header .HamburgerMenu .line + .line {
+  margin-top: 5px;
+}
+
+.header .HamburgerMenu.is-active .HamburgerMenuArea {
+  transform: rotateY(-360deg);
+}
+
+.header .HamburgerMenu.is-active .line:first-child {
+  /* transform: translateY(10px) rotate(-135deg); */
+  transform: translateY(10px) rotate(-45deg);
+  width: 60%;
+}
+
+.header .HamburgerMenu.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.header .HamburgerMenu.is-active .line:last-child {
+  /* transform: translateY(-10px) rotate(135deg); */
+  transform: translateY(-10px) rotate(45deg);
+  width: 60%;
+}
+
+.navigation {
+  background-color: #f8e8d3;
+  height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+  position: fixed;
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+
+.navigation.is-show {
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+
+.navigation .item {
+  text-align: center;
+}
+
+.navigation .list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section .heading {
+  text-align: center;
+}
+
+.section .container {
+  max-width: 900px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.section .heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* marginやpaddingを使用せずに、画像同士の余白を縦横20pxずつ取ってください */
+.section .contentWrap {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  margin-top: 40px;
+}
+
+/*
+・2カラム
+・親要素に対して画像幅が均等に配置されている
+・レスポンシブ対応可
+以上の要件を満たした画像レイアウトを記述してください */
+.section .contentWrap .image {
+  /* width: calc(50% - 20px); */
+}
+
+/*
+・画像の大きさ統一
+・画像歪みの整形
+以上の要件を満たしたスタイルを当ててください */
+.section .contentWrap img {
+  /* aspect-ratio: 16 / 9;
+  object-fit: cover; */
+}
