@@ -67,6 +67,7 @@ body {
 
 .header .HamburgerMenu.is-active .line:first-child {
   width: 60%;
+  transform: translateY(10px) rotate(-135deg);
 }
 
 .header .HamburgerMenu.is-active .line:nth-child(2) {
@@ -75,6 +76,7 @@ body {
 
 .header .HamburgerMenu.is-active .line:last-child {
   width: 60%;
+  transform: translateY(-10px) rotate(135deg);
 }
 
 .navigation {
@@ -127,5 +129,15 @@ body {
 .section .contentWrap {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   margin-top: 30px;
+}
+
+.section .contentWrap .image {
+  width: calc(50% - 10px);
+}
+
+.section .contentWrap img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
