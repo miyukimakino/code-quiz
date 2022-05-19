@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  /* position: relative; */
+  position: relative;
   border-bottom: 2px #eee solid;
 }
 
@@ -25,11 +25,10 @@ body {
   width: 60px;
 }
 
-/* 現在は3本線がｘになる通常の動きのハンバーガーメニュー
-スタイルを追加させ、奥行きを持ちながらｘが横回転する動きを持たせてください */
-/* .header .HamburgerMenuArea {
+/* おしゃれな回転をしてｘに変化するハンバーガーメニューになるようスタイルを当てる */
+.header .HamburgerMenuArea {
   transition: all 0.5s;
-} */
+}
 
 .header .HamburgerMenu .line {
   background-color: #333;
@@ -52,7 +51,6 @@ body {
 
 .header .HamburgerMenu.is-active .line:first-child {
   /* transform: translateY(10px) rotate(-135deg); */
-  transform: translateY(10px) rotate(-45deg);
   width: 60%;
 }
 
@@ -62,7 +60,6 @@ body {
 
 .header .HamburgerMenu.is-active .line:last-child {
   /* transform: translateY(-10px) rotate(135deg); */
-  transform: translateY(-10px) rotate(45deg);
   width: 60%;
 }
 
