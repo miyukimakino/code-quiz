@@ -109,7 +109,7 @@ body {
   font-weight: 600;
 }
 
-/* marginやpaddingを使用せずに、画像同士の余白を縦横20pxずつ取ってください */
+/* gapプロパティを使用して、画像同士の余白を縦横20pxずつ取ってください */
 .section .contentWrap {
   display: flex;
   flex-wrap: wrap;
@@ -117,19 +117,12 @@ body {
   margin-top: 40px;
 }
 
-/*
-・2カラム
-・親要素に対して画像幅が均等に配置されている
-・レスポンシブ対応可
-以上の要件を満たした画像レイアウトを記述してください */
+/* calcプロパティを使用して左右の幅が均等な2カラムなレイアウトにしてください */
 .section .contentWrap .image {
   /* width: calc(50% - 20px); */
 }
 
-/*
-・画像の大きさ統一
-・画像歪みの整形
-以上の要件を満たしたスタイルを当ててください */
+/* aspect-ratio・object-fitのプロパティを使用し、画像のアスペクト比を整え、画像歪みを解消してください */
 .section .contentWrap img {
   /* aspect-ratio: 16 / 9;
   object-fit: cover; */
